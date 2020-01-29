@@ -6,5 +6,6 @@ def count(data, word, start, end):
     for i in range(start,end):
         print(data[i] == word[j])
 
+
         return c
     print("a occurs:", count(hell, "a", "0", len(hell)))

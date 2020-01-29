@@ -7,3 +7,8 @@ while choice == "yes" :
 else:
     print(cart)
     print("your cart:", cart)
+
+if item in cart > 4 :
+    print("add more items")
+else:
+    print("cart")
