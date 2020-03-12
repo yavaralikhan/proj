@@ -6,7 +6,6 @@ cred = credentials.Certificate("key.json")
 firebase_admin.initialize_app(cred)
 print(">> Firebase Configured and Initialized :)")
 
-# MODEL
 class Customer:
 
     def __init__(self):
@@ -18,8 +17,6 @@ class Customer:
         print("{} | {} | {}".format(self.name, self.phone, self.email))
 
 
-
-# APPLICATION :)
 def main():
     customer = Customer()
     customer.showCustomerDetails()
@@ -27,10 +24,9 @@ def main():
     customerData = customer.__dict__
     print(customerData, type(customerData))
 
-    # db is reference to Firestore Database
     db = firestore.client()
-    db.collection("customers").document(customer.email).set(customerData)
+    db.collection("NewFile").document(customer.phone).set(customerData)
     print(">> CUSTOMER SAVED")
 
-if __name__ == "__main__":
-    main()
+if __name__ == "__main__" :
+  main()

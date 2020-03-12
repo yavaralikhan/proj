@@ -8,29 +8,29 @@ class Restaurant:
     def showRestaurant(self):
         print("{}".format(self.name))
         print("{}\n{}\n{}".format(self.phone,self.email,self.menu))
-          self.menu.showmenu()
-class menu:
+        self.menu.showMenu()
+
+class Menu:
     def __init__(self, name, description, dishes):
         self.name = name
         self.description = description
         self.dishes = dishes
 
-        def showmenu(self):
-         print("{}".format(self.name))
+    def showMenu(self):
+        print("{}".format(self.name))
         print("{}".format(self.description))
         print("{}".format(self.superhit))
 
 
-class actor:
-    def __init__(self,name, age):
-        self.name = name
-        self.age = age
+class Dish:
+    def __init__(self,name, price):
+      self.name = name
+      self.price = price
 
-       def showactor(self):
+    def showMenu(self):
         print("{}".format(self.name))
-        print("{}".format(self.age))
+        print("{}".format(self.price))
 
-        movie = Movie("James Bond", "January","3 crore",
-                      Verdict(superhit), Daniel Craig
-                      )
-        movie.showMovie()
+    dish = Dish("James", 500)
+
+    menu.showMenu()

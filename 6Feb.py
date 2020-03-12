@@ -1,7 +1,7 @@
 import mysql.connector as lib
 
 class Customer:
-    def __init__(self,mode):
+    def __init__(self, mode):
         if mode == 1:
             self.id = 0
             self.name = input("Enter name of the Customer :")
@@ -64,12 +64,17 @@ while repeat == "yes":
                 executeSQL(sql)
                 print(">> CUSTOMER UPDATED :)")
 
+
     elif choice == 3:
-        id = int(input("Enter id of the customer to be deleted"))
-        delete = input("Would you like to delete this customer? (yes/no)")
-        sql = "delete row where id = {}".format(customer.id)
-        executeSQL(sql)
-        print("Cutstomer Deleted successfully")
+
+        id = int(input("Enter Customer ID to be Deleted: "))
+        delete = input("Would you like to Delete Customer? (yes/no): ")
+
+        if delete == "yes":
+            sql = "delete from Customer where id = {}".format(id)
+            executeSQL(sql)
+            print(">> CUSTOMER DELETED :)")
+
 
 
 

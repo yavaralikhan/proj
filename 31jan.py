@@ -1,5 +1,6 @@
+#Inheritance
 class Product:
-    def __init__(self,pid,name,brand,):
+    def __init__(self, pid, name, brand,):
         self.pid = pid
         self.name = name
         self.brand = brand
@@ -8,8 +9,8 @@ class Product:
         print("{} | {} |{}".format(self.pid, self.name, self.brand))
 
 class Shoe(Product):
-    def __init__(self,pid,name,brand,Shoesize):
-        Product.__init__(self,pid,name,brand)
+    def __init__(self, pid, name, brand, Shoesize):
+        Product.__init__(self, pid, name, brand)
         self.Shoesize = Shoesize
     def showShoeDetails(self):
         Product.showProductDetails(self)

@@ -12,7 +12,7 @@ class HashTable:
         idx = id(data) % self.capacity
         return idx
 
-    def put(self,data):
+    def put(self, data):
         idx = self.hashCode(data)
         self.table[idx].append(data)
         print("Data {} inserted at index {}".format(data, idx))
