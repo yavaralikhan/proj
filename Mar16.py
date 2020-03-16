@@ -56,6 +56,5 @@ def Informationgain():
     print("Probability of Rainy", totalofrainy)
 
 
-
     #entropysunny = -(totalofsunny) * np.log2(totalofsunny ) - (probabilityofno) * np.log2(probabilityofno)
 Informationgain()
